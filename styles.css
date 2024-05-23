@@ -4,6 +4,7 @@
 .Título {
     margin: 0;
     padding: 0;
+    text-align: center;
     box-sizing: border-box;
     color: white;
     font-family: 'Times New Roman', Times, serif
