@@ -5,5 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-family: 'Times New Roman', Times, serif
+    
+    
+}
+
+body{
+    background-color: rgb(82, 82, 156);
 }
