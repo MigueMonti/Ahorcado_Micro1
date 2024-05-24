@@ -12,14 +12,6 @@
     color: white;
 }
 
-.Título_1 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    box-sizing: border-box;
-    font-family: 'Skranji';
-    color: rgb(67, 67, 207);
-}
 
 body{
     display: flex;
@@ -29,7 +21,7 @@ body{
     background-color: rgb(2, 128, 145);
 }
 
-.contenido{
+.Contenido{
     width: 850px;
     display: flex;
     padding: 60px 40px;
@@ -38,6 +30,21 @@ body{
     background: white;
     border-radius: 10px;
 }
+
+.Portada img{
+    max-width: 270px;
+}
+
+.Portada_Título {
+    margin-top: 0px;
+    font-size: 1.45rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Skranji';
+    color: rgb(67, 67, 207);
+}
+
+.Portada_
 .palabras{
     display: flex;
     gap: 10px;
