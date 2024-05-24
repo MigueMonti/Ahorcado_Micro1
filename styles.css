@@ -107,3 +107,30 @@ body{
 .Teclado button:hover{
     background: rgb(67, 67, 228);
 }
+
+
+.Modo-Juego{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+}
+
+
+.Reacciones{
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    background: white;
+}
+
+.Modo-Juego img{
+    max-width: 130px;
+}
