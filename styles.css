@@ -133,4 +133,27 @@ body{
 
 .Modo-Juego img{
     max-width: 130px;
+    margin-bottom: 20px;
+}
+
+.Modo-Juego h4{
+    font-size: 1.53rem;
+
+}
+
+.Modo-Juego p {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 15px 0 30px;
+
+}
+
+
+.Modo-Juego p b {
+    font-weight: 600;
+    color: rgb(0, 206, 27);
+}
+
+.Modo-Juego button{
+    padding: 12px 23px;
 }
