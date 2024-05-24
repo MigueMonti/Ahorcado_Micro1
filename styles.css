@@ -66,14 +66,14 @@ body{
     margin: -40px 0 35px;
 }
 
-.game h4{
+.Juego h4{
     font-size: 1.1rem;
     text-align: center;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-.game h4 p{
+.Juego h4 p{
     font-weight: 600;
 }
 
@@ -84,6 +84,7 @@ body{
 .Teclado{
     display: flex;
     gap: 5px;
+    margin-top: 40px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -91,11 +92,18 @@ body{
 .Teclado button {
     font-size: 1rem;
     font-weight: 600;
+    padding: 7px;
     cursor: pointer;
     outline: none;
+    border: none;
     border-radius: 4px;
     text-transform: uppercase;
     width: calc(100% / 9 - 5px);
     color: white;
     background: rgb(16, 48, 107);
+}
+
+
+.Teclado button:hover{
+    background: rgb(67, 67, 228);
 }
