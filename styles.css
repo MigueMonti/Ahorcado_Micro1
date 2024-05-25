@@ -36,7 +36,7 @@ body{
     max-width: 270px;
 }
 
-.Portada h1 {
+.Portada_Título {
     margin-top: 0px;
     text-align: center;
     text-transform: uppercase;
@@ -174,7 +174,7 @@ body{
         max-width: 200px;
     }
 
-    .Portada h1 {
+    .Portada_Título {
         display: none;
     }
 
