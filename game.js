@@ -2,11 +2,13 @@
 const PalabraAdiv = document.querySelector(".Palabra");
 const TecladoDir = document.querySelector(".Teclado");
 
+let PalabraActual;
 
 // Seleccionando una palabra aleatoria y su clave de PalabrasAdivinar del words.js
 const getPalabraAleatoria = () => {
     const { palabra, clave } = PalabrasAdivinar[Math.floor(Math.random() * PalabrasAdivinar.length)];
     //console.log(palabra, clave);
+    PalabraActual = palabra;
     console.log(palabra);
 
     document.querySelector(".Clave b").innerText = clave;
@@ -14,7 +16,13 @@ const getPalabraAleatoria = () => {
 }
 
 const initGame = (button, clickLetra) => {
-    console.log(button, clickLetra);
+    //console.log(button, clickLetra);
+    // Verifificando si la letra que se hace click / clickLetra está en la Palabra Actual a Adivinar
+    if(PalabraActual.includes(clickLetra)) {
+        console.log(clickLetra, " existe / está en la palabra");
+    } else {
+        console.log(clickLetra, " no existe / no está en la palabra");
+    }
 }
 
 // Creando los Botones del Teclado y Añadir EventListener
