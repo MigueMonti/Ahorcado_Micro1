@@ -67,6 +67,10 @@ body{
     margin: -40px 0 35px;
 }
 
+.Clave p {
+    font-weight: 500;
+}
+
 .Juego h4{
     font-size: 1.1rem;
     text-align: center;
@@ -74,7 +78,8 @@ body{
     margin-bottom: 15px;
 }
 
-.Juego h4 p{
+
+.Juego h4 {
     font-weight: 600;
 }
 
@@ -88,6 +93,9 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: 'Times';
+
+    
 }
 
 :where(.Modo-Juego, .Teclado) button{
@@ -100,6 +108,7 @@ body{
     text-transform: uppercase;
     color: white;
     background: rgb(16, 48, 107);
+    font-family: 'Times';
 }
 
 .Teclado button {
