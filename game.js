@@ -1,6 +1,10 @@
 
-
 const TecladoDir = document.querySelector(".Teclado");
+
+const getPalabraAleatoria = () => {
+
+}
+
 
 // Creando Botones del Teclado
 for (let i = 97; i <= 122; i++) {
