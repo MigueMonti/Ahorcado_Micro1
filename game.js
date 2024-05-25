@@ -26,10 +26,10 @@ const gameOver = (EsVictoria) => {
     // Después de 600ms de completar el juego se mostrarán los detalles de la partida
 
     setTimeout(() => {
-        const ModoTexto = EsVictoria ? `¡¡ Encontraste la Palabra: !!` : `La Palabra Correcta era:` ;
+        const ModoTexto = EsVictoria ? `¡¡ Encontraste la Palabra: ` : `¡¡ La Palabra Correcta era:` ;
         ModoJuego.querySelector("img").scr = `images/${EsVictoria ? 'Victoria' : 'Derrota'}.base`;
         ModoJuego.querySelector("h4").innerText = `${EsVictoria ? '¡¡ FELICITACIONES !!' : '¡¡ Juego Terminado !!'}.base`;
-        ModoJuego.querySelector("p").innerHTML = `${ModoTexto} <b>${PalabraActual}</b>`;
+        ModoJuego.querySelector("p").innerHTML = `${ModoTexto} <b>${PalabraActual} !!</b>`;
 
         ModoJuego.classList.add("mostrar");
     }, 300);

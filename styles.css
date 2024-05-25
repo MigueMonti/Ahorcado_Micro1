@@ -178,6 +178,7 @@ body{
 
 .Modo-Juego p b {
     font-weight: 600;
+    text-transform: uppercase;
     color: rgb(2, 128, 145);
 }
 
