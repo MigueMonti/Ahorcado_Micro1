@@ -3,6 +3,8 @@ const DollImg = document.querySelector(".Portada img");
 const PalabraAdiv = document.querySelector(".Palabra");
 const ContarIntentos = document.querySelector(".Intentos b");
 const TecladoDir = document.querySelector(".Teclado");
+const ModoJuego = document.querySelector(".Modo-Juego");
+
 
 
 let PalabraActual, LetrasCorrectas = [], ContarAdivinarIncorrecto = 0;
@@ -17,6 +19,12 @@ const getPalabraAleatoria = () => {
 
     document.querySelector(".Clave b").innerText = clave;
     PalabraAdiv.innerHTML = palabra.split("").map(() => `<li class="letra"></li>`).join("");
+}
+
+const gameOver = (EsVictoria) => {
+    setTimeout(() => {
+        ModoJuego.classList.add("mostrar");
+    }, 300);
 }
 
 const initGame = (button, clickLetra) => {
