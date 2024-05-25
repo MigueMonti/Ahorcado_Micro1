@@ -130,6 +130,7 @@ body{
 .Modo-Juego{
     left: 0;
     top: 0;
+    padding: 0 10px;
     position: fixed;
     width: 100%;
     height: 100%;

@@ -4,21 +4,37 @@ const PalabraAdiv = document.querySelector(".Palabra");
 const ContarIntentos = document.querySelector(".Intentos b");
 const TecladoDir = document.querySelector(".Teclado");
 const ModoJuego = document.querySelector(".Modo-Juego");
+const JuegaDeNuevo = document.querySelector(".Juega-de-Nuevo");
 
 
 
-let PalabraActual, LetrasCorrectas = [], ContarAdivinarIncorrecto = 0;
+let PalabraActual, LetrasCorrectas, ContarAdivinarIncorrecto;
 const maxAdivinar = 6;
+
+const resetGame = () => {
+
+    // Reiniciar todo el juego / partida
+
+    LetrasCorrectas = [];
+    ContarAdivinarIncorrecto = 0;
+    DollImg.src = `images/doll- ${ContarAdivinarIncorrecto}.svg`;
+    ContarIntentos.innerText = `${ContarAdivinarIncorrecto} / ${maxAdivinar}`;
+    TecladoDir.querySelectorAll("button").forEach(btn => btn.disabled = false);
+    PalabraAdiv.innerHTML = PalabraActual.split("").map(() => `<li class="letra"></li>`).join("");
+    ModoJuego.classList.remove("mostrar");
+
+}
 
 // Seleccionando una palabra aleatoria y su clave de PalabrasAdivinar del words.js
 const getPalabraAleatoria = () => {
     const { palabra, clave } = PalabrasAdivinar[Math.floor(Math.random() * PalabrasAdivinar.length)];
     //console.log(palabra, clave);
     PalabraActual = palabra;
-    console.log(palabra);
+    //console.log(palabra);
 
     document.querySelector(".Clave b").innerText = clave;
-    PalabraAdiv.innerHTML = palabra.split("").map(() => `<li class="letra"></li>`).join("");
+    resetGame();
+    //PalabraAdiv.innerHTML = palabra.split("").map(() => `<li class="letra"></li>`).join("");
 }
 
 const gameOver = (EsVictoria) => {
@@ -75,6 +91,7 @@ for (let i = 97; i <= 122; i++) {
 }
 
 getPalabraAleatoria();
+JuegaDeNuevo.addEventListener("click", getPalabraAleatoria);
 
 /*
 <button>a</button><button>b</button><button>c</button><button>d</button>
