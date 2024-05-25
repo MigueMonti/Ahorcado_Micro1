@@ -5,7 +5,7 @@ const ContarIntentos = document.querySelector(".Intentos b");
 const TecladoDir = document.querySelector(".Teclado");
 
 
-let PalabraActual, ContarAdivinarIncorrecto = 0;
+let PalabraActual, LetrasCorrectas = [], ContarAdivinarIncorrecto = 0;
 const maxAdivinar = 6;
 
 // Seleccionando una palabra aleatoria y su clave de PalabrasAdivinar del words.js
@@ -28,10 +28,9 @@ const initGame = (button, clickLetra) => {
         // Mostrar todas las letras correctas / que pertenezcan a la palabra correspondiente
         [...PalabraActual].forEach((letra, index) => {
             if(letra === clickLetra) {
+                LetrasCorrectas.push(letra);
                 PalabraAdiv.querySelectorAll("li")[index].innerText = letra;
                 PalabraAdiv.querySelectorAll("li")[index].classList.add("vista");
-
-
             }
         })
     } else {
@@ -44,6 +43,10 @@ const initGame = (button, clickLetra) => {
 
     button.disabled = true;
     ContarIntentos.innerText = `${ContarAdivinarIncorrecto} / ${maxAdivinar}`;
+
+    // Se llama a la función GameOver si alguna de éstas condiciones se cumplen / pasan
+    if(ContarAdivinarIncorrecto === maxAdivinar) return gameOver(false);
+    if(LetrasCorrectas.length === PalabraActual.length) return gameOver(true);
 }
 
 // Creando los Botones del Teclado y Añadir EventListener
