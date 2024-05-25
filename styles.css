@@ -67,7 +67,7 @@ body{
     margin: -40px 0 35px;
 }
 
-.Clave p {
+.Clave b {
     font-weight: 500;
 }
 
@@ -83,7 +83,7 @@ body{
     font-weight: 600;
 }
 
-.Intentos p{
+.Intentos b{
     color: red;
 }
 

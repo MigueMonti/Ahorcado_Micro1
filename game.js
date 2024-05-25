@@ -1,12 +1,16 @@
 
+const PalabraAdiv = document.querySelector(".Palabra");
 const TecladoDir = document.querySelector(".Teclado");
+
 
 // Seleccionando una palabra aleatoria y su clave de PalabrasAdivinar del words.js
 const getPalabraAleatoria = () => {
     const { palabra, clave } = PalabrasAdivinar[Math.floor(Math.random() * PalabrasAdivinar.length)];
     //console.log(palabra, clave);
     console.log(palabra);
-    document.querySelector("");
+
+    document.querySelector(".Clave b").innerText = clave;
+    PalabraAdiv.innerHTML = palabra.split("").map(() => `<li class="letra"></li>`).join("");
 }
 
 
