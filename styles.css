@@ -1,0 +1,204 @@
+
+/* */
+
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+
+.Título {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Skranji';
+    color: white;
+}
+
+
+body{
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(2, 128, 145);
+}
+
+.Contenido{
+    width: 850px;
+    display: flex;
+    padding: 60px 40px;
+    gap: 70px;
+    align-items: flex-end;
+    background: white;
+    border-radius: 10px;
+}
+
+.Portada img{
+    max-width: 270px;
+}
+
+.Portada_Título {
+    margin-top: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Skranji';
+    color: rgb(67, 67, 207);
+}
+
+.Palabra{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.letra{
+    width: 28px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #000;
+}
+
+.letra.vista{
+    border-color: transparent;
+    margin: -40px 0 35px;
+    color: rgb(16, 48, 107);
+}
+
+.Clave b {
+    font-weight: 500;
+}
+
+.Juego h4{
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+.Juego h4 {
+    font-weight: 600;
+}
+
+.Intentos b{
+    color: red;
+}
+
+.Teclado{
+    gap: 5px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Times';
+
+    
+}
+
+:where(.Modo-Juego, .Teclado) button{
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: white;
+    background: rgb(16, 48, 107);
+    font-family: 'Times';
+}
+
+.Teclado button {
+    padding: 7px;
+    width: calc(100% / 9 - 5px);
+}
+
+.Teclado button[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+:where(.Modo-Juego, .Teclado) button:hover{
+    background: rgb(67, 67, 228);
+}
+
+
+.Modo-Juego{
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease;
+    background: rgba(0,0,0,0.6);
+}
+
+.Modo-Juego.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+ }
+
+
+.Reacciones{
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    background: white;
+}
+
+.Modo-Juego img{
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+
+.Modo-Juego h4{
+    font-size: 1.53rem;
+
+}
+
+.Modo-Juego p {
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 15px 0 30px;
+
+}
+
+
+.Modo-Juego p b {
+    font-weight: 600;
+    color: rgb(2, 128, 145);
+}
+
+.Modo-Juego button{
+    padding: 12px 23px;
+}
+
+
+@media ( max-width: 782px) {
+    .Contenido {
+        padding: 30px 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Portada img {
+        max-width: 200px;
+    }
+
+    .Portada_Título {
+        display: none;
+    }
+
+}
