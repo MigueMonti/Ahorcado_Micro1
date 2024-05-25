@@ -17,7 +17,7 @@ const resetGame = () => {
 
     LetrasCorrectas = [];
     ContarAdivinarIncorrecto = 0;
-    DollImg.src = `images/doll- ${ContarAdivinarIncorrecto}.svg`;
+    DollImg.src = `imagenes/ahorcado-${ContarAdivinarIncorrecto}.svg`;
     ContarIntentos.innerText = `${ContarAdivinarIncorrecto} / ${maxAdivinar}`;
     TecladoDir.querySelectorAll("button").forEach(btn => btn.disabled = false);
     PalabraAdiv.innerHTML = PalabraActual.split("").map(() => `<li class="letra"></li>`).join("");
@@ -43,8 +43,8 @@ const gameOver = (EsVictoria) => {
 
     setTimeout(() => {
         const ModoTexto = EsVictoria ? `¡¡ Encontraste la Palabra: ` : `¡¡ La Palabra Correcta era:` ;
-        ModoJuego.querySelector("img").scr = `images/${EsVictoria ? 'Victoria' : 'Derrota'}.base`;
-        ModoJuego.querySelector("h4").innerText = `${EsVictoria ? '¡¡ FELICITACIONES !!' : '¡¡ Juego Terminado !!'}.base`;
+        ModoJuego.querySelector("img").src = `imagenes/${EsVictoria ? 'Victoria' : 'Derrota'}.png`;
+        ModoJuego.querySelector("h4").innerText = `${EsVictoria ? '¡¡ FELICITACIONES !!' : '¡¡ Juego Terminado !!'}`;
         ModoJuego.querySelector("p").innerHTML = `${ModoTexto} <b>${PalabraActual} !!</b>`;
 
         ModoJuego.classList.add("mostrar");
@@ -70,7 +70,7 @@ const initGame = (button, clickLetra) => {
 
         // Si se hace click a una letra que no está en la palabra sumará al ContarAdivinarIncorrecto y al DollImg
         ContarAdivinarIncorrecto++;
-        DollImg.src = `images/doll- ${ContarAdivinarIncorrecto}.svg`;
+        DollImg.src = `imagenes/ahorcado-${ContarAdivinarIncorrecto}.svg`;
     }
 
     button.disabled = true;
