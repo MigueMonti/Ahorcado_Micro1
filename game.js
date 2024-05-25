@@ -1,4 +1,5 @@
 
+const DollImg = document.querySelector(".Portada img");
 const PalabraAdiv = document.querySelector(".Palabra");
 const ContarIntentos = document.querySelector(".Intentos b");
 const TecladoDir = document.querySelector(".Teclado");
@@ -35,8 +36,13 @@ const initGame = (button, clickLetra) => {
         })
     } else {
         //console.log(clickLetra, " no existe / no está en la palabra");
+
+        // Si se hace click a una letra que no está en la palabra sumará al ContarAdivinarIncorrecto y al DollImg
         ContarAdivinarIncorrecto++;
+        DollImg.src = `images/doll- ${ContarAdivinarIncorrecto}.svg`;
     }
+
+    button.disabled = true;
     ContarIntentos.innerText = `${ContarAdivinarIncorrecto} / ${maxAdivinar}`;
 }
 

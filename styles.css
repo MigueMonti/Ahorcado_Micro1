@@ -117,6 +117,10 @@ body{
     width: calc(100% / 9 - 5px);
 }
 
+.Teclado button[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+}
 
 :where(.Modo-Juego, .Teclado) button:hover{
     background: rgb(67, 67, 228);
