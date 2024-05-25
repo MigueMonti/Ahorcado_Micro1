@@ -13,13 +13,17 @@ const getPalabraAleatoria = () => {
     PalabraAdiv.innerHTML = palabra.split("").map(() => `<li class="letra"></li>`).join("");
 }
 
+const initGame = (button, clickLetra) => {
+    console.log(button, clickLetra);
+}
 
-// Creando los Botones del Teclado
+// Creando los Botones del Teclado y Añadir EventListener
 for (let i = 97; i <= 122; i++) {
     //console.log(String.fromCharCode(i));
     const button = document.createElement("button");
     button.innerText = String.fromCharCode(i);
     TecladoDir.appendChild(button);
+    button.addEventListener("click", e => initGame(e.target, String.fromCharCode(i)))
 }
 
 getPalabraAleatoria();
