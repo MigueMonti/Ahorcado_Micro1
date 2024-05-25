@@ -1,7 +1,7 @@
 
 const TecladoDir = document.querySelector(".Teclado");
 
-// Seleccionando una palabra aleatoria y su clave de la Palabras a Adivinar en el words.js
+// Seleccionando una palabra aleatoria y su clave de PalabrasAdivinar del words.js
 const getPalabraAleatoria = () => {
     const { palabra, clave } = PalabrasAdivinar[Math.floor(Math.random() * PalabrasAdivinar.length)];
     //console.log(palabra, clave);
@@ -10,7 +10,7 @@ const getPalabraAleatoria = () => {
 }
 
 
-// Creando Botones del Teclado
+// Creando los Botones del Teclado
 for (let i = 97; i <= 122; i++) {
     //console.log(String.fromCharCode(i));
     const button = document.createElement("button");
