@@ -1,8 +1,11 @@
 
 const PalabraAdiv = document.querySelector(".Palabra");
+const ContarIntentos = document.querySelector(".Intentos b");
 const TecladoDir = document.querySelector(".Teclado");
 
-let PalabraActual;
+
+let PalabraActual, ContarAdivinarIncorrecto = 0;
+const maxAdivinar = 6;
 
 // Seleccionando una palabra aleatoria y su clave de PalabrasAdivinar del words.js
 const getPalabraAleatoria = () => {
@@ -20,6 +23,8 @@ const initGame = (button, clickLetra) => {
     // Verifificando si la letra que se hace click / clickLetra está en la Palabra Actual a Adivinar
     if(PalabraActual.includes(clickLetra)) {
         //console.log(clickLetra, " existe / está en la palabra");
+        
+        // Mostrar todas las letras correctas / que pertenezcan a la palabra correspondiente
         [...PalabraActual].forEach((letra, index) => {
             if(letra === clickLetra) {
                 PalabraAdiv.querySelectorAll("li")[index].innerText = letra;
@@ -29,8 +34,10 @@ const initGame = (button, clickLetra) => {
             }
         })
     } else {
-        console.log(clickLetra, " no existe / no está en la palabra");
+        //console.log(clickLetra, " no existe / no está en la palabra");
+        ContarAdivinarIncorrecto++;
     }
+    ContarIntentos.innerText = `${ContarAdivinarIncorrecto} / ${maxAdivinar}`;
 }
 
 // Creando los Botones del Teclado y Añadir EventListener
