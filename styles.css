@@ -65,6 +65,7 @@ body{
 .letra.vista{
     border-color: transparent;
     margin: -40px 0 35px;
+    color: rgb(16, 48, 107);
 }
 
 .Clave b {
