@@ -1,42 +1,42 @@
 const PalabrasAdivinar = [
     {
-        palabra: "Universidad",
+        palabra: "universidad",
         clave: "Institución."
     },
     {
-        palabra: "Algoritmos",
+        palabra: "algoritmos",
         clave: "Materia."
     },
     {
-        palabra: "Saman",
+        palabra: "saman",
         clave: "UNIMET."
     },
     {
-        palabra: "CAVUM",
+        palabra: "cavum",
         clave: "Agrupación."
     },
     {
-        palabra: "Avila",
+        palabra: "avila",
         clave: "Caracas."
     },
     {
-        palabra: "Feria",
+        palabra: "feria",
         clave: "Almuerzo."
     },
     {
-        palabra: "Batidos",
+        palabra: "batidos",
         clave: "Juice Bar."
     },
     {
-        palabra: "Pepperoni",
+        palabra: "pepperoni",
         clave: "Pizza."
     },
     {
-        palabra: "Empanadas",
+        palabra: "empanadas",
         clave: "Punto Grill."
     },
     {
-        palabra: "Te",
+        palabra: "te",
         clave: "La Tiendita."
     },
 ];

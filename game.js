@@ -19,7 +19,15 @@ const initGame = (button, clickLetra) => {
     //console.log(button, clickLetra);
     // Verifificando si la letra que se hace click / clickLetra está en la Palabra Actual a Adivinar
     if(PalabraActual.includes(clickLetra)) {
-        console.log(clickLetra, " existe / está en la palabra");
+        //console.log(clickLetra, " existe / está en la palabra");
+        [...PalabraActual].forEach((letra, index) => {
+            if(letra === clickLetra) {
+                PalabraAdiv.querySelectorAll("li")[index].innerText = letra;
+                PalabraAdiv.querySelectorAll("li")[index].classList.add("vista");
+
+
+            }
+        })
     } else {
         console.log(clickLetra, " no existe / no está en la palabra");
     }
