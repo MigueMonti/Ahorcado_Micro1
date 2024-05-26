@@ -37,6 +37,7 @@ body{
 }
 
 .Palabra{
+    padding: 0;
     display: flex;
     gap: 10px;
     list-style: none;
