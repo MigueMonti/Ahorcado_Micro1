@@ -188,7 +188,7 @@ body{
 }
 
 
-@media ( max-width: 782px) {
+@media (max-width: 975px) {
     .Contenido {
         padding: 30px 15px;
         flex-direction: column;
