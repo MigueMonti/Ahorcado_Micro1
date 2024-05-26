@@ -1,11 +1,11 @@
 const PalabrasAdivinar = [
     {
         palabra: "universidad",
-        clave: "Institución."
+        clave: "Institución"
     },
     {
         palabra: "algoritmos",
-        clave: "Materia."
+        clave: "Materia"
     },
     {
         palabra: "saman",
@@ -13,30 +13,30 @@ const PalabrasAdivinar = [
     },
     {
         palabra: "cavum",
-        clave: "Agrupación."
+        clave: "Agrupación"
     },
     {
         palabra: "avila",
-        clave: "Caracas."
+        clave: "Caracas"
     },
     {
         palabra: "feria",
-        clave: "Almuerzo."
+        clave: "Almuerzo"
     },
     {
         palabra: "batidos",
-        clave: "Juice Bar."
+        clave: "Juice Bar"
     },
     {
         palabra: "pepperoni",
-        clave: "Pizza."
+        clave: "Pizza"
     },
     {
         palabra: "empanadas",
-        clave: "Punto Grill."
+        clave: "Punto Grill"
     },
     {
         palabra: "te",
-        clave: "La Tiendita."
+        clave: "La Tiendita"
     },
 ];
