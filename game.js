@@ -12,9 +12,12 @@ let PalabraActual, LetrasCorrectas, ContarAdivinarIncorrecto;
 const maxAdivinar = 6;
 
 respuesta.addEventListener('click', ()=>{
-    if(input.value.length == 11) {
-        alert('Palabra de 11 letras')
+    if(input.value == PalabraActual) {
+        gameOver(true);
+    } else {
+        gameOver(false);
     }
+    input.reset();
 })
 
 const resetGame = () => {
