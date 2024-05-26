@@ -9,7 +9,7 @@ const PalabrasAdivinar = [
     },
     {
         palabra: "saman",
-        clave: "UNIMET."
+        clave: "UNIMET"
     },
     {
         palabra: "cavum",
