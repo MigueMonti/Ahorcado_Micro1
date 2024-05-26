@@ -5,11 +5,25 @@ const ContarIntentos = document.querySelector(".Intentos b");
 const TecladoDir = document.querySelector(".Teclado");
 const ModoJuego = document.querySelector(".Modo-Juego");
 const JuegaDeNuevo = document.querySelector(".Juega-de-Nuevo");
+<<<<<<< HEAD
 //const AdivinarPalabra = document.querySelector(".adivinar");
 
+=======
+const input = document.getElementById("input")
+const respuesta = document.getElementById("respuesta")
+>>>>>>> develop
 
 let PalabraActual, LetrasCorrectas, ContarAdivinarIncorrecto;
 const maxAdivinar = 6;
+
+respuesta.addEventListener('click', ()=>{
+    if(input.value == PalabraActual) {
+        gameOver(true);
+    } else {
+        gameOver(false);
+    }
+    input.reset();
+})
 
 const resetGame = () => {
 
