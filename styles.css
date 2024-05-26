@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 
 
+
 body{
     display: flex;
     margin: 0;
@@ -62,6 +63,7 @@ body{
     margin: -40px 0 35px;
     color: rgb(16, 48, 107);
 }
+
 
 .Juego h4{
     font-size: 1.1rem;
