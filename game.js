@@ -17,7 +17,6 @@ respuesta.addEventListener('click', ()=>{
     } else {
         gameOver(false);
     }
-    input.reset();
 })
 
 const resetGame = () => {
