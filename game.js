@@ -5,11 +5,18 @@ const ContarIntentos = document.querySelector(".Intentos b");
 const TecladoDir = document.querySelector(".Teclado");
 const ModoJuego = document.querySelector(".Modo-Juego");
 const JuegaDeNuevo = document.querySelector(".Juega-de-Nuevo");
-
-
+const input = document.getElementById("input");
+const adivinar = document.getElementById("adivinar_id");
 
 let PalabraActual, LetrasCorrectas, ContarAdivinarIncorrecto;
 const maxAdivinar = 6;
+
+adivinar.addEventListener("respuesta", e=>{
+    e.preventDefault();
+    if (input.value = "universidad") {
+        alert("Bien")
+    }
+})
 
 const resetGame = () => {
 
